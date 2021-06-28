@@ -13,7 +13,7 @@
             position: relative;
             padding-left: 25px;
             display: grid;
-            grid-template: repeat(2, minmax(21px, auto)) / 200px 100px;
+            grid-template: repeat(2, minmax(21px, auto)) / repeat(2, auto); /* автоширина для колонок для автоподбора под контент(длинна слова/строки) */
             justify-content: space-between;
             row-gap: 5px;
             &:before {
