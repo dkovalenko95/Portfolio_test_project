@@ -99,7 +99,25 @@
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
-                    <img src="img/main_photo.jpg" alt="my photo">
+                    <!-- <img srcset="img/main_photo-min.jpg 300w,
+                                img/main_photo.jpg 400w"
+                        sizes="(max-width: 575px) 280px,
+                                (min-width: 576) 400px"
+                    src="img/main_photo.jpg" alt="my photo"> -->
+
+                    <!-- <picture>
+                        <source media="(max-width: 575px)" srcset="img/main_photo-min.jpg">
+                        <source media="(min-width: 576px)" srcset="img/main_photo.jpg>
+                        <img src="img/main_photo.jpg" alt="photo">
+                    </picture>  -->
+                    
+                    <!-- //за допомогою цих тегів+атрибутів можна підключати абсолютно різні файли; в атрибут srcset підставляти не тільки локальні картинки, але і через url, навідміну від img+srcset+sizes, ще за допомогою цього методу можна використовувати картинки різного формату -->
+
+                    <picture>
+                        <source type="image/webp" srcset="img/main_photo.webp"> <!-- за допомогою атрибуту type можна налаштовувати формат картинки -->
+                        <img src="img/main_photo.jpg" alt="photo">
+                    </picture> 
+
                 </div>
                 <div class="about__descr">
                     <h2 class="title title_fs16 about__title">Про меня</h2>
