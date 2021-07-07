@@ -1,3 +1,5 @@
+// закоментовані медіаправила зроблені мною самостійно - активні варіанти взяті з курса Івана П.
+
 // @media (max-width: 1399.98px) {};
 @media (max-width: 1439.98px) {
     .sidepanel {
@@ -30,7 +32,7 @@
         
     }
     .skills {
-        &__items {
+        /* &__items {
             grid-template: repeat(2,minmax(270px,auto))/repeat(4,225px);
             grid-auto-rows: minmax(270px,auto);
         }
@@ -42,6 +44,28 @@
             }
             &-line {
                 width: 280px;
+            }
+        } */
+        &__items {
+            grid-template-columns: repeat(auto-fit, 270px);
+            justify-content: space-around;
+        }
+        &__ratings {
+            grid-template-columns: repeat(auto-fit, 350px);
+            grid-auto-rows: minmax(70px, auto);
+            justify-content: space-around;
+            padding: 0 30px;
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 35px;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
             }
         }
     }
@@ -77,7 +101,7 @@
         }
     }
     .skills {
-        &__items {
+        /* &__items {
             grid-template: repeat(2,minmax(270px,auto))/repeat(3,220px);
             grid-auto-rows: minmax(270px,auto);
             gap: 19px;
@@ -91,6 +115,25 @@
             &-line {
                 width: 325px;
             }
+        } */
+        &__items {
+            padding: 0 20px;
+        }
+        &__ratings {
+            grid-template-columns: repeat(auto-fit, 320px);
+            justify-content: space-between;
+            padding: 0;
+            column-gap: 0;
+            &-line {
+                width: 100%;
+            }
+        }
+    }
+    .price {
+        &__block {
+            grid-template-columns: repeat(auto-fit, 340px);
+            padding: 0;
+            margin: 20px 5px 0 5px;
         }
     }
 };
@@ -136,7 +179,7 @@
         }
     }
     .skills {
-        &__items {
+        /* &__items {
             grid-template: repeat(2,minmax(270px,auto))/repeat(2,250px);
             grid-auto-rows: minmax(270px,auto);
             gap: 20px;
@@ -150,6 +193,29 @@
             &-line {
                 width: 240px;
             }
+        } */
+        padding-top: 40px;
+        &__items {
+            padding: 0;
+            justify-content: center;
+            gap: 20px;
+        }
+        &__ratings {
+            grid-template-columns: repeat(auto-fit, 320px);
+            grid-auto-rows: minmax(70px, auto);
+            justify-content: center;
+            margin-top: 40px;
+            &-line {
+                width: 100%;
+            }
+        }
+    }
+    .portfolio {
+        padding-top: 40px;
+    }
+    .price {
+        &__block {
+            justify-content: center;
         }
     }
 };
@@ -207,7 +273,7 @@
             margin-top: 15px;
         }
         padding-top: 40px;
-        &__items {
+        /* &__items {
             margin-top: 20px;
             grid-template: repeat(2,minmax(270px,auto))/280px;
             grid-auto-rows: minmax(270px,auto);
@@ -222,6 +288,17 @@
             &-line {
                 width: 300px;
             }
+        } */
+        &__items {
+            margin-top: 20px;
+        }
+        &__ratings {
+            grid-template-columns: repeat(auto-fit,300px);
+        }
+    }
+    .price {
+        &__block {
+            grid-template-columns: repeat(auto-fit, 295px);
         }
     }
 };
